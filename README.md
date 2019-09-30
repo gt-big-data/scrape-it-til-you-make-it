@@ -35,7 +35,7 @@ scrape.py
 
 #### HTML
 ```html
-<!-- This is the root tag. It encapsulates alll html content.   -->
+<!-- This is the root tag. It encapsulates all html content.   -->
 <html>
 ...
 <!-- Tags in HTML have an associated "/" tag that ends the tag's enclosure. -->
@@ -71,15 +71,33 @@ scrape.py
 ## JSON
 
 ### Example
+```
+{
+	"employee": {
+	    "name": "Richard Smith",
+	    "age": 23
+    }
+}
+```
 
 ### .dumps
+Convert python object to JSON string
+```
+json.dumps({'employee': {"name": 'Richard Smith', 'age': 23})
+>>> '{"employee": {"name": "Richard Smith", "age": 23}}'
+```
 
 ### .loads
+Convert JSON to a Python object
+```
+json.loads('{"employee": {"name": "Richard Smith", "age": 23}}')
+>>> {"employee": {'name': 'Richard Smith', 'age': 23}
+```
 
 ## Beautiful Soup
 
 <Where most of tutorial will live - Good luck>
-
+Instructions
 
 ## Test it out!
 
