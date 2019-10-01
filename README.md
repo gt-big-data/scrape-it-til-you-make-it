@@ -113,8 +113,54 @@ soup = BeautifulSoup(html_doc, 'html.parser')
 ```
 The first line imports the Beautiful Soup framework. The second line create an html parsing object with the html file.
 
+#### 3. Useful Methods
+##### Title
+```
+soup.title
+<title>Wikipedia</title>
+```
+##### Name
+```
+soup.title.name
+u'title'
+```
+```
+soup.title.string
+#u'The Dormouse's story'
+```
+```
+soup.title.parent.name
+u'head'
+```
+```
+soup.p
+ <p class="title"><b>The Dormouse's story</b></p>
+ ```
+```
+soup.p['class']
+#u'title'
+```
+```
+soup.a
+<a class="sister" href="http://example.com/elsie" id="link1">Elsie</a>
+```
 
-#### Useful Methods
+##### Find all
+This function returns takes in a tag parameter and returns all instances of that tag in the html
+```
+soup.find_all('a')
+[<a class="sister" href="http://example.com/elsie" id="link1">Elsie</a>,
+ <a class="sister" href="http://example.com/lacie" id="link2">Lacie</a>,
+ <a class="sister" href="http://example.com/tillie" id="link3">Tillie</a>]
+ ```
+
+##### Loping through
+```
+for link in soup.find_all('a'):
+    print(link.get('href'))
+http://example.com/elsie
+http://example.com/lacie
+```
 
 ## Test it out!
 
