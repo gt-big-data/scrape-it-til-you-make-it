@@ -24,7 +24,7 @@ data/
 /* This is where you will implement the code for this tutorial. Good luck! :) */
 scrape.py
 ```
-<Example>
+
 ## HTML Review
 This is a quick review of HTML or Hypertext Markup Language. HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.
 
