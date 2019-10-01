@@ -1,6 +1,10 @@
 # Scrape It 'Til You Make It
 Data Scraping 101
-<Link slides>
+
+For supplementary information explaining the premise of data scraping, go [here](https://docs.google.com/presentation/d/1GiMOLlGX-JwUoZPmiYU9fEpFDB5QRR0kyxV892f2ha4/edit?usp=sharing)!
+
+In this tutorial, we will be scraping data from a website to populate our own webpage!
+
 ## Repo Structure
 
 ```
@@ -22,6 +26,7 @@ scrape.py
 ```
 <Example>
 ## HTML Review
+This is a quick review of HTML or Hypertext Markup Language. HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.
 
 ### HTML Tags
 
@@ -69,8 +74,11 @@ scrape.py
 ```
 
 ## JSON
+JSON or JavaScript Object Notation is an open-standard file format that uses human-readable text to transmit data objects consisting of attribute–value pairs and array data types.
 
-### Example
+It's basically a string formatted Python dictionary.
+
+### JSON Example
 ```
 {
 	"employee": {
@@ -80,28 +88,29 @@ scrape.py
 }
 ```
 
+There is a python package also called `json` that we can use to parse the object.
+
 ### .dumps
-Convert python object to JSON string
+Converts python object to JSON string
 ```
 json.dumps({'employee': {"name": 'Richard Smith', 'age': 23})
 >>> '{"employee": {"name": "Richard Smith", "age": 23}}'
 ```
 
 ### .loads
-Convert JSON to a Python object
+Converts JSON to a Python object
 ```
 json.loads('{"employee": {"name": "Richard Smith", "age": 23}}')
 >>> {"employee": {'name': 'Richard Smith', 'age': 23}
 ```
 
 
-
 ## Beautiful Soup
+Beautiful Soup is a Python library for pulling data out of HTML and XML files.
 
-<Where most of tutorial will live - Good luck>
-### Instructions
+### Startup Instructions
 
-#### 1. Installing 
+#### 1. Installing
 Run this command in terminal to install the package
 ```
 pip install bs4
@@ -116,20 +125,22 @@ soup = BeautifulSoup(html_doc, 'html.parser')
 The first line imports the Beautiful Soup framework. The second line create an html parsing object with the html file.
 
 #### 3. Useful Methods
+Beautiful Soup converts HTML tags to objects.
+
 ##### Tag
 Gets the tag with the name as the variable
 ```
 soup.title
 <title>Wikipedia</title>
 
-# or 
+# or
 
 soup.p
 <p class="title"><b>The Dormouse's story</b></p>
 ```
 
 ##### Name
-Gets the name of the tag specified 
+Gets the name of the tag specified
 ```
 soup.title.name
 # u'title'
@@ -178,8 +189,16 @@ http://example.com/elsie
 http://example.com/lacie
 ```
 
-## Test it out!
+### Tutorial
+Now for the fun bit! We have given you the tools to succeed, it is time to apply it. :)
 
+Task:
+
+...
+
+Once you have written this data to a file using the correct format, we can now visualize it using a webpage we created which reads the JSON in `data/data.json`.
+
+## Test it out!
 ```
 python -m http.server 8000
 ```
