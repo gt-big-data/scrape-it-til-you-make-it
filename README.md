@@ -194,7 +194,7 @@ Now for the fun bit! We have given you the tools to succeed, it is time to apply
 
 Task:
 
-...
+Extract all amusement parks, films, and albums involving Wonderland from the wikipedia page.
 
 Once you have written this data to a file using the correct format, we can now visualize it using a webpage we created which reads the JSON in `data/data.json`.
 
