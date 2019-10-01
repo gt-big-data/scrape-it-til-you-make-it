@@ -97,7 +97,24 @@ json.loads('{"employee": {"name": "Richard Smith", "age": 23}}')
 ## Beautiful Soup
 
 <Where most of tutorial will live - Good luck>
-Instructions
+### Instructions
+
+#### 1. Installing 
+Run this command in terminal to install the package
+```
+pip install bs4
+```
+
+#### 2. Importing
+Add the following lines to the top of scrape.api
+```
+from bs4 import BeautifulSoup
+soup = BeautifulSoup(html_doc, 'html.parser')
+```
+The first line imports the Beautiful Soup framework. The second line create an html parsing object with the html file.
+
+
+#### Useful Methods
 
 ## Test it out!
 
