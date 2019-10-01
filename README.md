@@ -189,7 +189,7 @@ http://example.com/elsie
 http://example.com/lacie
 ```
 
-### Tutorial
+## Application
 Now for the fun bit! We have given you the tools to succeed, it is time to apply it. :)
 
 Task:
