@@ -94,6 +94,8 @@ json.loads('{"employee": {"name": "Richard Smith", "age": 23}}')
 >>> {"employee": {'name': 'Richard Smith', 'age': 23}
 ```
 
+
+
 ## Beautiful Soup
 
 <Where most of tutorial will live - Good luck>
@@ -114,35 +116,47 @@ soup = BeautifulSoup(html_doc, 'html.parser')
 The first line imports the Beautiful Soup framework. The second line create an html parsing object with the html file.
 
 #### 3. Useful Methods
-##### Title
+##### Tag
+Gets the tag with the name as the variable
 ```
 soup.title
 <title>Wikipedia</title>
+
+# or 
+
+soup.p
+<p class="title"><b>The Dormouse's story</b></p>
 ```
+
 ##### Name
+Gets the name of the tag specified 
 ```
 soup.title.name
-u'title'
+# u'title'
 ```
+##### String
+Gets the string contained within the tag specified
 ```
 soup.title.string
-#u'The Dormouse's story'
+u'The Dormouse's story'
 ```
+##### Parent
+Returns the parent of the tag specified
 ```
-soup.title.parent.name
+soup.title.parent
 u'head'
 ```
-```
-soup.p
- <p class="title"><b>The Dormouse's story</b></p>
- ```
+##### Class
+Gets the class of the tag specified
 ```
 soup.p['class']
 #u'title'
 ```
+
+##### All text
+This function returns all the text inside the html page
 ```
-soup.a
-<a class="sister" href="http://example.com/elsie" id="link1">Elsie</a>
+soup.get_text()
 ```
 
 ##### Find all
@@ -155,9 +169,11 @@ soup.find_all('a')
  ```
 
 ##### Loping through
+This is an example of looping through all a tags and prints the link contained inside its href attribute
 ```
 for link in soup.find_all('a'):
     print(link.get('href'))
+
 http://example.com/elsie
 http://example.com/lacie
 ```
