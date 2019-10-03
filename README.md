@@ -1,5 +1,4 @@
-# Scrape It 'Til You Make It
-Data Scraping 101
+# Scrape It 'Til You Make It: Data Scraping 101
 
 For supplementary information explaining the premise of data scraping, go [here](https://docs.google.com/presentation/d/1GiMOLlGX-JwUoZPmiYU9fEpFDB5QRR0kyxV892f2ha4/edit?usp=sharing)!
 
@@ -192,11 +191,34 @@ http://example.com/lacie
 ## Application
 Now for the fun bit! We have given you the tools to succeed, it is time to apply it. :)
 
-Task:
-
+### Task
 Extract all amusement parks, films, and albums involving Wonderland from the wikipedia page.
 
-Once you have written this data to a file using the correct format, we can now visualize it using a webpage we created which reads the JSON in `data/data.json`.
+
+Once you have written this data to a file using the correct format (given below), we can now visualize it using a webpage we created which reads the JSON in `data/data.json`.
+
+```json
+[
+  {
+    "name": "Thing 1",
+    "type": "amusement park",
+    "img":  "http://wiki.org/.../image_1.png"
+  },
+  {
+    "name": "Thing 2",
+    "type": "film",
+    "img":  "http://wiki.org/.../image_2.png"
+  },
+
+  ...
+
+  {
+    "name": "Thing X",
+    "type": "album",
+    "img":  "http://wiki.org/.../image_X.png"
+  }
+]
+```
 
 ## Test it out!
 ```
