@@ -222,6 +222,7 @@ Once you have written this data to a file using the correct format (given below)
 ```
 
 ## Test it out!
+Copy data.json into the `ui/` directory.
 ```
 python -m http.server 8000
 ```

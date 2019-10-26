@@ -1,2 +1,18 @@
-/* Populate this with your scraped data, please!!! */
-{}
+[
+  {
+    "name": "Thing 1",
+    "type": "amusement park",
+    "img":  "http://wiki.org/.../image_1.png"
+  },
+  {
+    "name": "Thing 2",
+    "type": "film",
+    "img":  "http://wiki.org/.../image_2.png"
+  },
+
+  {
+    "name": "Thing X",
+    "type": "album",
+    "img":  "http://wiki.org/.../image_X.png"
+  }
+]
