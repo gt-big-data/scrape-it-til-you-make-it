@@ -120,7 +120,8 @@ pip install bs4
 Add the following lines to the top of scrape.api
 ```
 from bs4 import BeautifulSoup
-soup = BeautifulSoup(html_doc, 'html.parser')
+soup = BeautifulSoup(open("wonderland.html"), 'html.parser')
+
 ```
 The first line imports the Beautiful Soup framework. The second line create an html parsing object with the html file.
 
